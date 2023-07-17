@@ -1,0 +1,30 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    background-color: white;
+    padding: 20px;
+    font-family: Poppins;
+    width: 60%; /* Added to occupy full width */
+  }
+  
+  /* Add a media query for mobile screens */
+  @media (max-width: 767px) {
+    .content {
+      padding: 10px; /* Adjust the padding for smaller screens if needed */
+      width:90%;
+    }
+    
+    .text-end {
+      text-align: center; /* Center align the buttons on mobile screens */
+    }
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
+  

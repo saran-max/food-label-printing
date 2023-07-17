@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./../../assets/logo.jpg" alt="Logo" height="40">
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <span class="navbar-text">{{dataShareService.email}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="padding-top: 100px;">
+    
+    <div class="container-grid">
+        <div class="table-responsive">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="grid-heading">Products Grid</h3>
+            <button class="btn btn-primary btn-sm" (click)="dataShareService.recordId = null" [routerLink]="'../food-entry'">Add</button>
+          </div>
+          <table class="table table-bordered mt-3">
+            <thead>
+              <tr>
+                <th style="width:50px">Image</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Suitable for</th>
+                <th style="width:140px">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of foodItems | async">
+                <td><img [src]="item.image"  class="img-fluid"></td>
+                <td>{{item.productName}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.suitableFor}}</td>
+                <td>
+                  <button class="btn btn-primary btn-sm" (click)="editFoodItem(item)">Edit</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteFoodItem(item.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+</div>
+
+
+  
+  
+
+  

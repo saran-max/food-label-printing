@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "food-allergies-eb3f0",
+    "food-labels": "food-labels-d92ed"
+  },
+  "targets": {},
+  "etags": {}
+}
